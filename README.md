@@ -16,7 +16,7 @@ Easy to use in any project.
     $file = null;
         if ($bookRequest->hasFile('file'))
         {
-            $file = Uploader::uploadFile('file', 'books-pdf');
+            $file = UploaderFile::uploadFile('file', 'books-pdf');
         }
 ```
 
@@ -28,9 +28,9 @@ Easy to use in any project.
         {
             if ($book->file)
             {
-                Uploader::removeFile("books-pdf", $book->file);
+                UploaderFile::removeFile("books-pdf", $book->file);
             }
-                $file = Uploader::uploadFile('file', 'books-pdf');
+                $file = UploaderFile::uploadFile('file', 'books-pdf');
         }
 ```
 
